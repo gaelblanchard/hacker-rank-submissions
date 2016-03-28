@@ -1,18 +1,11 @@
 //
 //  diagonal_sum.cpp
-//  
-//
-//  Created by new on 3/27/16.
-//
-//
 #include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
 #include <algorithm>
 using namespace std;
-
-
 int main(){
     int n;
     int primarydiagsum=0;
@@ -25,21 +18,17 @@ int main(){
             cin >> a[a_i][a_j];
         }
     }
-    for(int i=0;i<n;i++)
-    {
+    for(int i=0;i<n;i++){
         primarydiagsum=primarydiagsum+a[i][i];
     }
-    for(int i=0;i<n;i++)
-    {
+    for(int i=0;i<n;i++){
         secondarydiagsum=secondarydiagsum+a[i][n-(i+1)];
     }
     finaldiff=primarydiagsum-secondarydiagsum;
-    if(finaldiff<0)
-    {
+    if(finaldiff<0){
         finaldiff=finaldiff*-1;
     }
     cout<<finaldiff<<endl;
     
     return 0;
 }
-
